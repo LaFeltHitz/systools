@@ -15,7 +15,9 @@
 #include <thread>
 #include <chrono>
 #include <mutex>
+#include <string>
 
 // TODO: reference additional headers your program requires here
 
 #include "connection.h"
+#include "DBObject.h"
