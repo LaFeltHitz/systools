@@ -27,6 +27,12 @@
     <ClInclude Include="DBObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TDDatabase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TDUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -36,6 +42,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DBObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TDDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TDUser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

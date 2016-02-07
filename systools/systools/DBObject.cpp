@@ -1,5 +1,9 @@
 #include "stdafx.h"
 
+DBObject::DBObject(string nm) {
+	this->name = nm;
+}
+
 string DBObject::getName()
 {
 	return name;
@@ -7,14 +11,8 @@ string DBObject::getName()
 
 void DBObject::setName(string nm)
 {
-	name = nm;
+	this->name = nm;
 }
 
-string User::getDDL()
-{
-	return string();
-}
 
-User::User(string nm) {
-	setName(nm);
-}
+

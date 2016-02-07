@@ -16,8 +16,11 @@
 #include <chrono>
 #include <mutex>
 #include <string>
+#include <cmath>
 
 // TODO: reference additional headers your program requires here
 
 #include "connection.h"
 #include "DBObject.h"
+#include "TDDatabase.h"
+#include "TDUser.h"
