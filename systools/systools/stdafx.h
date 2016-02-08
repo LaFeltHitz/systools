@@ -17,6 +17,7 @@
 #include <mutex>
 #include <string>
 #include <cmath>
+#include <vector>
 
 // TODO: reference additional headers your program requires here
 

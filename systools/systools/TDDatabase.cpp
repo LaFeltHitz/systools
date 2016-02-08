@@ -5,13 +5,13 @@
 /* CONSTRUCTORS */
 TDDatabase::TDDatabase(string name) : DBObject(name), owner{ nullptr }, permspace{ 0 }, spoolspace{ 0 }, tempspace{ 0 } {}
 
-TDDatabase::TDDatabase(shared_ptr<TDDatabase> owner, string name) : DBObject(name), owner{ owner }, permspace{ 0 }, spoolspace{ owner->getSpool() }, tempspace{ owner->getTemp() } {}
+TDDatabase::TDDatabase(TDDatabase * owner, string name) : DBObject(name), owner{ owner }, permspace{ 0 }, spoolspace{ owner->getSpool() }, tempspace{ owner->getTemp() } {}
 
-TDDatabase::TDDatabase(shared_ptr<TDDatabase> owner, string name, perm_t perm) : DBObject(name), owner{ owner }, permspace(perm), spoolspace{ owner->getSpool() }, tempspace{ owner->getTemp() } {}
+TDDatabase::TDDatabase(TDDatabase * owner, string name, perm_t perm) : DBObject(name), owner{ owner }, permspace(perm), spoolspace{ owner->getSpool() }, tempspace{ owner->getTemp() } {}
 
 /* ACCESSORS */
-void TDDatabase::setOwner( shared_ptr<TDDatabase> owner) {
-	this->owner = owner;
+void TDDatabase::setOwner( TDDatabase * owner) {
+	this->owner = make_shared<TDDatabase>(owner);
 }
 
 TDDatabase TDDatabase::getOwner()
